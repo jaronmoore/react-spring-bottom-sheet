@@ -25,6 +25,7 @@
     "dev": "next",
     "lint": "eslint . --ext ts,tsx,js,jsx --max-warnings 0 && tsc",
     "prepublishOnly": "npm run build:dist",
+    "prepare": "yarn build:dist",
     "start": "next start",
     "test": "npm run prepublishOnly && npm run build"
   },
