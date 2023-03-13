@@ -42,6 +42,13 @@ export type SpringEvent =
   | { type: 'RESIZE'; source: ResizeSource }
   | { type: 'SNAP'; source: 'dragging' | 'custom' | string }
 
+export type PortalProps = {
+  /**
+   * The container ref to which the portal will be appended. If not set the portal will be appended to the body of the component's owner document (typically this is the document.body).
+   */
+  containerRef?: React.RefObject<Node>
+}
+
 export type Props = {
   /**
    * Ensure that whatever you put in here have at least 1px height, or else the bottom sheet won't open
